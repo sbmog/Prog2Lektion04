@@ -1,21 +1,22 @@
 package opgave01.models;
 
-public class IntegerVault {
-    private Integer secret;
+public class StringVault {
+    private String secret;
     private String password;
 
-    public IntegerVault(Integer secret, String password) {
+    public StringVault(String secret, String password) {
         this.secret = secret;
         this.password = password;
     }
 
 
-    public Integer getSecret(String password) {
+    public String getSecret(String password) {
         if (this.password.equals(password)) {
             return secret;
-        }
-        else {
+        } else {
             throw new IllegalArgumentException("Wrong password");
         }
     }
 }
+
+
